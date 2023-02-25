@@ -1,0 +1,15 @@
+/Users/tatana/Desktop/SeminarProg1/Zadacha3/obj/Debug/net7.0/Zadacha3.csproj.AssemblyReference.cache
+/Users/tatana/Desktop/SeminarProg1/Zadacha3/obj/Debug/net7.0/Zadacha3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tatana/Desktop/SeminarProg1/Zadacha3/obj/Debug/net7.0/Zadacha3.AssemblyInfoInputs.cache
+/Users/tatana/Desktop/SeminarProg1/Zadacha3/obj/Debug/net7.0/Zadacha3.AssemblyInfo.cs
+/Users/tatana/Desktop/SeminarProg1/Zadacha3/obj/Debug/net7.0/Zadacha3.csproj.CoreCompileInputs.cache
+/Users/tatana/Desktop/SeminarProg1/Zadacha3/bin/Debug/net7.0/Zadacha3
+/Users/tatana/Desktop/SeminarProg1/Zadacha3/bin/Debug/net7.0/Zadacha3.deps.json
+/Users/tatana/Desktop/SeminarProg1/Zadacha3/bin/Debug/net7.0/Zadacha3.runtimeconfig.json
+/Users/tatana/Desktop/SeminarProg1/Zadacha3/bin/Debug/net7.0/Zadacha3.dll
+/Users/tatana/Desktop/SeminarProg1/Zadacha3/bin/Debug/net7.0/Zadacha3.pdb
+/Users/tatana/Desktop/SeminarProg1/Zadacha3/obj/Debug/net7.0/Zadacha3.dll
+/Users/tatana/Desktop/SeminarProg1/Zadacha3/obj/Debug/net7.0/refint/Zadacha3.dll
+/Users/tatana/Desktop/SeminarProg1/Zadacha3/obj/Debug/net7.0/Zadacha3.pdb
+/Users/tatana/Desktop/SeminarProg1/Zadacha3/obj/Debug/net7.0/Zadacha3.genruntimeconfig.cache
+/Users/tatana/Desktop/SeminarProg1/Zadacha3/obj/Debug/net7.0/ref/Zadacha3.dll
