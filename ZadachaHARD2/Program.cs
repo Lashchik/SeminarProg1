@@ -4,3 +4,5 @@ Console.WriteLine("Введи число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 int tnd = 1;
 int count = math.log10(num);
+
+не решено
