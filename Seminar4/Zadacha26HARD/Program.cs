@@ -5,7 +5,7 @@ int Index(double num)
 
 {
 int count = 0;
-while ((num % 1) > 0)
+while ((num % 1) > 1)
 {
      num = (num * 10);
      Console.WriteLine(num);
