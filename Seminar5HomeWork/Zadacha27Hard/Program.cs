@@ -7,11 +7,9 @@
 // 9,012 ->4
 
 Console.Write("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+double num = Convert.ToDouble(Console.ReadLine());
 int count = 0;
-while (number > 0) 
-{
-number /= 10;
-count++;
-}
-Console.WriteLine($"Колличество цифр в числе: {count}");
+while (num != 0) 
+{count++;
+num = Math.Floor(num / 10);}
+Console.WriteLine($"Количество цифр в числе: {count}");
