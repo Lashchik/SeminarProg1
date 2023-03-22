@@ -1,6 +1,7 @@
 ﻿
 
 int[,] pic = new int[,]  
+
 {  
   {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
   {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -26,6 +27,7 @@ int[,] pic = new int[,]
   {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0 },  
   {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, }; 
 
+
 void PrintImage(int[,] image)
 
 {
@@ -40,4 +42,20 @@ void PrintImage(int[,] image)
         Console.WriteLine();
     }
 }
+
+void FillImage(int row, int col)
+{
+    if (pic[row, col] == 0)
+    {
+        pic[row, col] = 1;
+        FillImage(row - 1, col);
+        FillImage(row, col - 1);
+        FillImage(row + 1, col);
+        FillImage(row, col + 1);
+
+    }
+}
+
+PrintImage(pic);
+FillImage(13, 13);
 PrintImage(pic);
