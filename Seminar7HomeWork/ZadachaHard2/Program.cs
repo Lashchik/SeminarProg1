@@ -19,20 +19,20 @@ ShuffleArray(array, m, n);
 Console.WriteLine("Перемешанный массив:");
 PrintArray(array);
 
-static void FillArray(int[,] array)
+void FillArray(int[,] array)
  {
     Random random = new Random();
     for (int i = 0; i < array.GetLength(0); i++)
     {for (int j = 0; j < array.GetLength(1); j++)
         {array[i, j] = random.Next(1, 101);}}}
 
-static void PrintArray(int[,] array)
+void PrintArray(int[,] array)
     {for (int i = 0; i < array.GetLength(0); i++)
         {for (int j = 0; j < array.GetLength(1); j++)
         {Console.Write("{0,4}", array[i, j]);}
     Console.WriteLine();}}
 
-    static void ShuffleArray(int[,] array, int m, int n)
+void ShuffleArray(int[,] array, int m, int n)
     {Random random = new Random();
         int swaps = m * n / 2;
         for (int k = 0; k < swaps; k++)
@@ -43,4 +43,4 @@ static void PrintArray(int[,] array)
             int j2 = random.Next(n);
             int temp = array[i1, j1];
             array[i1, j1] = array[i2, j2];
-            array[i2, j2] = temp}}
+            array[i2, j2] = temp;}}
