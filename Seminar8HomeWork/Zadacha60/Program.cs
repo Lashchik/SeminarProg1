@@ -5,98 +5,28 @@
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
 
-// int[,,] array = new int[10, 10, 10];
-// FillArray(array);
-// PrintArray(array);
-// bool contains = ArrayContains(array, 42);
-// Console.WriteLine("Массив содержит значение 42: {0}", contains);
-// PrintArray(array);
 
-// void FillArray(int[,,] array)
-// {Random random = new Random();
-//     for (int i = 0; i < 10; i++)
-//     {for (int j = 0; j < 10; j++)
-//         {for (int k = 0; k < 10; k++)
-//             {int value;
-//                 do
-//                 {value = random.Next(10, 1000);}
-//                 while (ArrayContains(array, value));
-//                 array[i, j, k] = value;}}}}
-
-// bool ArrayContains(int[,,] array, int value)
-// {for (int i = 0; i < array.GetLength(0); i++)
-//     {for (int j = 0; j < array.GetLength(1); j++)
-//         {for (int k = 0; k < array.GetLength(2); k++)
-//             {if (array[i, j, k] == value)
-//                 {return true;}}}}
-//         return false;}
-
-// void PrintArray(int[,,] array)
-// {for (int i = 0; i < array.GetLength(0); i++)
-//     {for (int j = 0; j < array.GetLength(1); j++)
-//          {for (int k = 0; k < array.GetLength(2); k++)
-//             {Console.Write("{0}[{1},{2},{3}] ", array[i, j, k], i, j, k);}
-//             Console.WriteLine();}
-//         Console.WriteLine();}}
-
-int[,,] array;
-FillArray(out array);
-PrintArray(array);
-bool contains = ArrayContains(array, 42);
-Console.WriteLine("Массив содержит значение 42: {0}", contains);
+int[,,] array = new int[2, 2, 2];
+CreateArray(array);
 PrintArray(array);
 
-void FillArray(out int[,,] array)
-{
-    array = new int[10, 10, 10];
-    Random random = new Random();
-    for (int i = 0; i < 10; i++)
-    {
-        for (int j = 0; j < 10; j++)
-        {
-            for (int k = 0; k < 10; k++)
-            {
-                int value;
-                do
-                {
-                    value = random.Next(10, 1000);
-                } while (ArrayContains(array, value));
-                array[i, j, k] = value;
-            }
-        }
-    }
-}
+void CreateArray(int[,,] array)
+    {Random random = new Random();
+    HashSet<int> usedNumbers = new HashSet<int>();
 
-bool ArrayContains(int[,,] array, int value)
-{
     for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            for (int k = 0; k < array.GetLength(2); k++)
-            {
-                if (array[i, j, k] == value)
-                {
-                    return true;
-                }
-            }
-        }
-    }
-    return false;
-}
+    {for (int j = 0; j < array.GetLength(1); j++)
+        {for (int k = 0; k < array.GetLength(2); k++)
+            {int num = random.Next(10, 100);
+                while (usedNumbers.Contains(num))
+                {num = random.Next(10, 100);}
+                array[i, j, k] = num;
+                usedNumbers.Add(num);}}}}
 
 void PrintArray(int[,,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            for (int k = 0; k < array.GetLength(2); k++)
-            {
-                Console.Write("{0}[{1},{2},{3}] ", array[i, j, k], i, j, k);
-            }
-            Console.WriteLine();
-        }
-        Console.WriteLine();
-    }
-}
+{for (int i = 0; i < array.GetLength(0); i++)
+    {for (int j = 0; j < array.GetLength(1); j++)
+        {for (int k = 0; k < array.GetLength(2); k++)
+            {Console.Write("{0:00}({1},{2},{3}) ", array[i, j, k], i, j, k);}
+            Console.WriteLine();}
+        Console.WriteLine();}}

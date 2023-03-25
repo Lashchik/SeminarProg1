@@ -33,34 +33,23 @@ void PrintArray(int[,] array)
 Console.WriteLine();
 
 void FillSpiralArray(int[,] array, int x, int y, int size, int num)
-{
-    if (size <= 0) return;
+    {if (size <= 0) return;
 
     if (size == 1)
-    {
-        array[x, y] = num;
-        return;
-    }
+    {array[x, y] = num;
+        return;}
 
     for (int i = 0; i < size - 1; i++)
-    {
-        array[x, y + i] = num++;
-    }
+    {array[x, y + i] = num++;}
 
     for (int i = 0; i < size - 1; i++)
-    {
-        array[x + i, y + size - 1] = num++;
-    }
+    {array[x + i, y + size - 1] = num++;}
 
     for (int i = size - 1; i > 0; i--)
-    {
-        array[x + size - 1, y + i] = num++;
-    }
+    {array[x + size - 1, y + i] = num++;}
 
     for (int i = size - 1; i > 0; i--)
-    {
-        array[x + i, y] = num++;
-    }
+    {array[x + i, y] = num++;}
 
     FillSpiralArray(array, x + 1, y + 1, size - 2, num);
 }
